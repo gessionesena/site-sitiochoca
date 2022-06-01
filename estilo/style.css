@@ -1,3 +1,5 @@
+
+/*FORMATAÇÕES GERAIS*/
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
@@ -5,15 +7,74 @@
 }
 
 body {
-    background-color: rgb(235, 218, 177);
+    background-color: #f7d6a5;
 }
 
+a:link, a:active, a:visited {
+    color: #4f220b;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #f7d6a5;
+}
+
+/*ÁREA DE CABEÇALHO*/
 header {
-    height: 250px;
-    border: 1px solid black;
-    padding: 10px;
+    background-color: #febc5b;
+    color: #fff;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
 }
 
+header #area-logo {
+    width: 30%;
+    padding: 10px 5px;
+    text-align: center;
+    color: #4f220b;
+    border: 1px solid red;
+}
+
+header #area-logo img {
+    width: 75%;
+    height: 75%;
+    margin-top: 10px;
+}
+
+header #area-menu {
+    width: 100%; /*verificar a possibilidade de usar flex basis*/
+    font-size: 18px;
+    border: 1px solid red;
+    
+    /*background: url(../imagens/bg-area-menu2.jpeg) no-repeat bottom right;*/
+}
+
+nav ul {
+    list-style: none;
+    float: right;
+    border: 1px solid red;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a:link {
+    display: block;
+    margin-right: 25px;
+    padding: 10px 0px;
+}
+
+
+
+
+
+
+
+
+/*ÁREA DO CONTEÚDO PRINCIPAL*/
 main {
     width: 75%;
     margin: 15px auto;    
@@ -24,10 +85,19 @@ article {
     padding: 10px;
 }
 
+
+
+
+
+/*ÁREA DO RODAPÉ*/
 footer {
+    background-color: #4f220b;
     height: 50px;
-    border: 1px solid black;
     text-align: center;
+    color: #fff;
     line-height: 50px;
     font-weight: bold;
 }
+
+
+
