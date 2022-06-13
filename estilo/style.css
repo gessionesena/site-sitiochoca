@@ -28,7 +28,6 @@ a:hover {
 }
 
 #container {
-    height: 100%;
     background:linear-gradient(to bottom, rgba(254, 188, 91, 0.5), rgba(0,0,0, 0.6)), url('../imagens/bg-temp.jpeg') no-repeat bottom center;
     background-attachment: fixed;
     background-size: cover;
@@ -45,7 +44,8 @@ header {
     padding: 0px 15px;
     height: 40px;
     width: 100%;
-    background: linear-gradient(to left, rgba(254, 188, 91, 0.9), rgba(254, 188, 91, 0.9));
+    background-color: var(--amarelo-forte);
+    opacity: 0.9;
     font-size: 25px;
     color: #fff;
 
@@ -93,11 +93,13 @@ nav ul li:hover {
 
 /*ÁREA DO CONTEÚDO PRINCIPAL*/
 
-section#area-logo {
-    padding: 15px;
+section#conteudo-primario {
+    height: 100%;
+    padding-top: 40px;
 }
 
 article#logo {
+    padding: 15px;
     width: 15%;  
     text-align: center;
 }
@@ -143,11 +145,12 @@ article#texto-principal input {
 article#texto-principal input:hover {
     background-color: var(--amarelo-claro);
     opacity: 0.9;
+    cursor: pointer;
 }
 
 div#como-funciona { /*interessante adicionar script para puxar (rolar pagina) o conteúdo ao ser clicaado*/
-    background-color: var(--amarelo-claro);
-    opacity: 0.9;
+    background-color: var(--amarelo-forte);
+    opacity: 0.8;
     margin: auto;
     width: 15%;
     height: 25px;
@@ -161,16 +164,23 @@ div#como-funciona span{
     font-weight: bold;
 }
 
+div#como-funciona:hover {
+    cursor: help;
+} 
+
+section#conteudo-secundario {
+    background: var(--amarelo-forte);
+    opacity: 0.8;
+}
 
 article#informacoes-gerais {
     width: 100%;
-    background-color: var(--amarelo-claro);
-    opacity: 0.9;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around; 
 }
+
 
 article .informacoes {
     width: 15%;
@@ -185,8 +195,6 @@ article .informacoes p {
 }
 
 article#area-video {
-    background-color: var(--amarelo-claro);
-    opacity: 0.9;
     text-align: center;
 }
 
