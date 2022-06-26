@@ -29,6 +29,7 @@ a:hover {
 }
 
 /*ÁREA DE CABEÇALHO*/
+/*
 header {
     display: flex;
     flex-direction: row;
@@ -45,12 +46,14 @@ header #texto-logo {
     width: 140px;
     text-align: center;
 }
+*/
 
-header #texto-logo span {
+header nav span {
     color: var(--marrom);
+    
 }
 
-
+/*
 nav ul {
     list-style: none;
     float: right;
@@ -68,7 +71,7 @@ nav ul li a:link {
     display: block;   
 }
 
-
+*/
 
 /*ÁREA DO CONTEÚDO PRINCIPAL*/
 
