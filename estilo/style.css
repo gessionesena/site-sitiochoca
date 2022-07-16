@@ -7,15 +7,13 @@
 
 /*FORMATAÇÕES GERAIS*/
 * {
-    font-family: Helvetica, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Helvetica, Montserrat, Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    min-width: 720px;
-    min-height: 600px;
-}
+
 
 a:link, a:active, a:visited {
     color: var(--marrom);
@@ -28,108 +26,175 @@ a:hover {
 }
 
 #home #container {
-    background:linear-gradient(to bottom, rgba(254, 188, 91, 0.5), rgba(0,0,0, 0.6)), url('../imagens/bg-temp.jpeg') no-repeat bottom center;
+   
+    background:linear-gradient(to bottom, rgba(254, 188, 91, 0.5), rgba(0,0,0, 0.6)), url('../imagens/bg1.jpeg') no-repeat bottom right;
     background-attachment: fixed;
     background-size: cover;
-
     position: relative;
+    
 }
+
+/*ÁREA DE CArrossel
+
+.galery {
+    width: 100vw;
+    height: 100vh;
+
+   
+    position: fixed;
+    z-index: -2; 
+    overflow: hidden;
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.galery .photos {
+   
+    width: 500%;
+    animation-name: carrossel;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+        
+}
+
+
+
+.galery .photos img {
+    width: 20%;
+    height: 100%;
+    margin: none;
+    
+    top: -20%;
+    border: 1px solid red;
+}
+
+@keyframes carrossel {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    25% {margin-left: -100vw;}
+    45% {margin-left: -100vw;}
+    50% {margin-left: -200vw;}
+    70% {margin-left: -200vw;}
+    75% {margin-left: -300vw;}
+    95% {margin-left: -300vw;}
+    100% {margin-left: -400vw;}
+}
+
+ fim ÁREA DE CArrossel*/
+
+
+
+
+
+
+
 
 /*ÁREA DE CABEÇALHO*/
 header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; 
     padding: 0px 0px 0px 15px;
     height: 40px;
     width: 100%;
     background-color: var(--amarelo-forte);
-    opacity: 0.9;
+    border-bottom: 1px solid var(--amarelo-claro);
     font-size: 25px;
-    color: #fff;
-    
     position: fixed;
-    z-index: 1;
-    
+    z-index: 1; 
 }
 
-header #texto-logo {
+#texto-logo {
     width: 15%;
-    height: 40px;
+    height: 100%;
     text-align: center;
     line-height: 1.5em; 
 }
 
-header #texto-logo span {
+#texto-logo span {
+    width: 100%;   
+}
+#text-sitio {
     color: var(--marrom);
 }
 
+#text-choca {
+    color: #fff;
+}
 
-nav ul {
+
+header nav ul {
     list-style: none;
     float: right;
+    margin-right: 15px;
 }
 
-nav ul li {
+header nav ul li {
     float: left;
-    width: 140px;
-    height: 40px;
+    width: 120px;
+    min-width: 100px;
+    height:100%;
     text-align: center;
-    line-height: 1.5em;
+    line-height: 1.6em;
 }
 
 
-nav ul li a:link {
+header nav ul li a:link {
     font-size: 0.7em;
-    display: block;   
+    display: block; 
 }
 
-nav ul li:hover {
+header nav ul li:hover {
     border-bottom: 1px solid #fff;   
 }
-
+ 
 
 
 /*ÁREA DO CONTEÚDO PRINCIPAL*/
 
-section#conteudo-primario {
-    height: 100%;
+#conteudo-primario {
+    min-height: 80vh;
     padding-top: 40px;
 }
 
-article#logo {
-    padding: 15px;
-    width: 15%;  
+#logo {
+    padding: 5px;
+    width: 15%; 
+    min-width: 120px; 
     text-align: center;
 }
 
-article#logo img {
-    width: 80%;
-    height: 80%;
+#logo img {
+    width: 90%;
+    height: 90%;
     margin-top: 10px;
-    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.3));/*sombra na logo*/
+    /*filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.3));sombra na logo*/
+    
 }
 
 
-article#texto-principal {
-    height: 60vh;
+#texto-principal {
     padding: 15px;
     text-align: center;
     color: #fff;
     text-shadow: 5px 5px 5px rgba(0,0,0, 0.6);
 }
 
-article#texto-principal h2 {
+#texto-principal h2 {
     font-size: 2.8em;
     margin-bottom: 20px;   
 }
 
-article#texto-principal p {
+#texto-principal p {
     font-size: 1.2em;
 }
 
-article#texto-principal input {
+#texto-principal input {
     background-color: var(--amarelo-forte);
     opacity: 0.9;
     border: none;
@@ -142,76 +207,84 @@ article#texto-principal input {
     color: var(--marrom);
 }
 
-article#texto-principal input:hover {
+#texto-principal input:hover {
     background-color: var(--amarelo-claro);
     opacity: 0.9;
     cursor: pointer;
 }
 
-div#como-funciona { /*interessante adicionar script para puxar (rolar pagina) o conteúdo ao ser clicaado*/
-    background-color: var(--amarelo-forte);
-    opacity: 0.8;
-    margin: auto;
-    width: 15%;
-    height: 25px;
-    padding-top: 7px;
-    border-radius: 50% 50% 0% 0%;
-    text-align: center;
-}
+/*INÍCIO CONTEUDO SECUNDARIO*/
 
-div#como-funciona span{
-    color: var(--marrom);
-    font-weight: bold;
-}
-
-div#como-funciona:hover {
-    cursor: help;
-} 
-
-section#conteudo-secundario {
+#conteudo-secundario {
     background: var(--amarelo-forte);
-    opacity: 0.8;
+    color: var(--marrom);
 }
 
-article#informacoes-gerais {
-    width: 100%;
+#area-informacoes {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-around; 
+    flex-wrap: wrap;
+    /*
+    position: sticky;
+    top: 45px;*/
 }
 
-
-article .informacoes {
-    width: 15%;
-    margin: 10px 0 50px 0;
+/*CAIXA COM INFORMAÇÕES DE CONTATO*/
+.informacoes {
+    width: 280px;
+    min-width: 60px;
+    margin: 10px 0 10px 0;
     padding: 20px 10px;
+    text-align: center; 
+      
+}
+
+.informacoes p {
+    padding-top: 10px;
+}
+
+.informacoes img {
+    width: 15%;
+    min-width: 30px;
+    padding-bottom: 5px;
+}
+
+.informacoes:hover {
+    color: var(--marrom);
+    text-decoration: underline; 
+}
+
+
+
+/*INÍCIO ÁREA COM VIDEO*/
+#area-video {
     text-align: center;
-    border: 1px solid var(--marrom);
+    height: 500px;
 }
 
-article .informacoes p {
-    padding-top: 20px;
+#area-video h3 {
+    padding: 15px;
 }
-
-article#area-video {
-    text-align: center;
-}
-
-article#area-video h3 {
-    padding: 20px;
+#video {
+    margin: 0px auto;
+    width: 40%;
+    height: 70%;
 }
 
 #video iframe{
+    width: 100%;
+    height: 100%;
     border: 4px solid var(--marrom);
-    margin: 20px 0 50px 0;
+    margin: 20px 0 30px 0;
 }
 
 
 /*ÁREA DO RODAPÉ*/
 footer {
     background-color: var(--marrom);
-    height: 50px;
+    height: 80px;
     text-align: center;
     color: #fff;
     line-height: 50px;
