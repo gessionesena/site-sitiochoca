@@ -1,0 +1,14 @@
+/*ANIMAÇÃO DO TÍTULO PRINCIPAL*/
+.fadeIn {
+    animation: fadeIn 2s linear;    
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/*FIM DA ANIMAÇÃO DO TÍTULO PRINCIPAL*/

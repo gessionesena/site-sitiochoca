@@ -5,50 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/responsive.css">
+    <link rel="stylesheet" href="estilo/animation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Nunito:wght@200;300&display=swap" rel="stylesheet">
     <title>Contato - Sítio Choça</title>
 </head>
-<body>
+<body id="contact">
     <div id="container"><!--Área principal-->
+           
         <header><!--Início área de cabeçário do site-->
             <div id="texto-logo">
-                <span>Sítio</span>Choça
+                <span id="text-sitio">Sítio</span><span id="text-choca">Choça</span>
             </div>
-            <div id="area-menu">
-                <nav><!--Menu navegação-->
-                    <ul id="menu-principal">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="acomodacoes.html">Acomodações</a></li>
-                        <li><a href="espaco.html">Espaço</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                        <li><a href="localizacao.html">Localização</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav><!--Menu navegação-->
+                <ul id="menu-principal">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="acomodacoes.html">Acomodações</a></li>
+                    <li><a href="espaco.html">Espaço</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="localizacao.html">Localização</a></li>
+                </ul>
+            </nav>
         </header><!--Fim área de cabeçário do site-->
-       
+    
+
+
+
+
         <!--INÍCIO DO CONTEÚDO DA PÁGINA-->
 
         <section id="conteudo-primario"> <!--INÍCIO DO CONTEÚDO DA PRIMEIRA PÁGINA-->
-            <article id="logo">
+            <div id="logo">
                 <img src="imagens/logo.png" alt="logo">
-            </article>
+            </div>
                 
-            <article id="texto-principal">
-                <h2>Sinta-se em casa!</h2>
-                <p>Alugue para diárias, finais de semana ou feriados.</p>
-                <input type="button" value="Faça sua reserva" id="botao-reserva">
-            </article>
+            <div id="texto-principal" class="fadeIn">
+                <h2>Contato</h2>
+                <p>Contacte-nos através de nossos canais de atendimento no Whatsapp, Instagran, Telefone ou via e-mail.</p>
+            </div>
+            
             
         </section> <!--FIM DO CONTEÚDO DA PRIMEIRA PÁGINA-->
 
+        <section id="conteudo-secundario"><!--INÍCIO DO CONTEÚDO DA SEGUNDA PÁGINA-->
+            <div id="area-informacoes">
+                <a href="https://api.whatsapp.com/send?phone=5588998240570&text=Ol%C3%A1%2C%20S%C3%ADtio%20Cho%C3%A7a!" target="_blank" class="informacoes">
+                    <div>
+                        <img src="imagens/whatsapp.png" alt="whatsapp">
+                        <h3>Whatsapp</h3>
+                        <p>Atendimento rápido no zap.</p>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/sitio_choca/" target="_blank" class="informacoes">
+                    <div>
+                        <img src="imagens/instagram.png" alt="instagram">
+                        <h3>Instagran</h3>
+                        <p>Se preferir contacte-nos via Direct.</p>
+                    </div>
+                </a>
+                <a href="contato.html" class="informacoes">
+                    <div>
+                        <img src="imagens/telefone.png" alt="telefone">
+                        <h3>Telefone</h3>
+                        <p>Também atendemos por telefone.</p>
+                    </div>
+                </a>
+                <a href="" target="_blank" class="informacoes">
+                    <div>
+                        <img src="imagens/email.png" alt="email">
+                        <h3>Email</h3>
+                        <p>Ou envie-nos um email.</p>
+                    </div>
+                </a>
+
+            </div>
+
             
+        </section>     
         <!--FIM DO CONTEÚDO DA PÁGINA--> 
 
+        
     </div> <!--Fim da Área principal-->
-
     <footer><!--Área de rodapé-->
-        <span>Sítio Choça</span> &copy; Todos os direitos reservados
+        <div>
+            <span class="text-strong">Sítio Choça </span><span>&copy; Todos os direitos reservados</span>
+        </div>
+        
+        <div id="icon-ctt">
+            <a href="https://api.whatsapp.com/send?phone=5588998240570&text=Ol%C3%A1%2C%20S%C3%ADtio%20Cho%C3%A7a!" target="_blank">
+                <img class="item" src="imagens/whatsapp-white.png" alt="icone-whatsapp">
+            </a>
+            <a href="https://www.instagram.com/sitio_choca/" target="_blank">
+                <img class="item" src="imagens/instagram-white.png" alt="icone-instagran">
+            </a>
+        </div>
     </footer>
+    
     
 
     <script src="javascript/script.js"></script>
