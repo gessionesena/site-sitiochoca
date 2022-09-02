@@ -163,7 +163,7 @@ header nav ul li:hover {
 /*ÁREA DO CONTEÚDO PRINCIPAL*/
 
 #conteudo-primario {
-    min-height: 80vh;
+    height: 80vh;
     padding-top: 40px;
 }
 
@@ -224,6 +224,10 @@ header nav ul li:hover {
 #conteudo-secundario {
     background-color: rgba(254,188,91, 0.7);
     color: var(--marrom);
+}
+
+#contact #conteudo-secundario {
+    height: 20vh;
 }
 
 #area-informacoes {
